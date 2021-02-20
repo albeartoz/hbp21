@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-import '../.env';
+import logo from './covidex-logo.png';
+import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Col from 'react-bootstrap/Col';
 
 function App() {
   return (
     <div className="App">
-      apiResult = 'nameofwebsite.com/api/' + API_KEY;
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Form className="App-form">
+          <Form.Control className="text-center" size="lg" type="text" placeholder="Type your location here" />
+        </Form>
       </header>
     </div>
   );
