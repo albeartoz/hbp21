@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import '../.env';
 
 function App() {
   return (
     <div className="App">
+      apiResult = 'nameofwebsite.com/api/' + API_KEY;
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
