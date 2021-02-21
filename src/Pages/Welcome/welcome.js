@@ -38,7 +38,7 @@ function FreeSolo() {
           id="city-search"
           options={locations.map((option) => option.name)}
           renderInput={(params) => (
-            <TextField {...params} label="Search for your city" margin="normal" variant="filled" />
+            <TextField {...params} label="Search for my city" margin="normal" variant="filled" />
           )}
         />
       </div>
