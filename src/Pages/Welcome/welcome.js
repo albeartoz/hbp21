@@ -1,4 +1,6 @@
+import React from 'react';
 import MyNavbar from '../../Components/Navbar/navbar.js';
+import Paper from '@material-ui/core/Paper';
 import Button from 'react-bootstrap/Button';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -13,8 +15,9 @@ const Welcome = () => {
                 {/* <Form className="App-form">
                     <Form.Control className="text-center" size="lg" type="text" placeholder="Type your location here" />
                 </Form> */}
-
+                
                 <FreeSolo />
+                
                 <Button className="Submit-button" variant="dark" size="lg">
                     See my risk
                 </Button>

@@ -3,9 +3,6 @@ import React from 'react';
 import Welcome from './Pages/Welcome/welcome'
 import MyNavbar from './Components/Navbar/navbar';
 
-
-
-
 function App() {
   return (
     <div className="App">
@@ -14,9 +11,6 @@ function App() {
     </div>
   );
 }
-
-
-
 
 
 export default App;
