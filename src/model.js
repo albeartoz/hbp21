@@ -176,6 +176,9 @@ const testInput = tf.tensor([[[0., 0., 0., 0., 0.,
 const Predictions = () => {
     const [isPredicted, setIsPredicted] = useState(false);
     const [prediction, setPrediction] = useState();
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [items, setItems] = useState([]);
 
     async function loadModel(url) {
         try {
@@ -199,8 +202,23 @@ const Predictions = () => {
             setPrediction(mod.predict(testInput));
             setIsPredicted(true);
         })
-    }, []);
 
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=Boston&appid=' + process.env.REACT_APP_API_KEY)
+        .then(res => res.json())
+        .then(
+            (result) => {
+                setIsLoaded(true);
+                setItems(result);
+            },
+            (error) => {
+                setIsLoaded(true);
+                setError(error);
+            }
+        )
+    }, []);
+    if (isLoaded) {
+        console.log(items);
+    }
     if (isPredicted && !!prediction) {
         
         return (

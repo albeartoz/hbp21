@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Predictions from './model'
 import {useState} from 'react'
-import APIDisp from './weather'
 import Welcome from './Pages/Welcome/welcome'
 import MyNavbar from './Components/Navbar/navbar';
 
@@ -15,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <MyNavbar />
+      <Predictions></Predictions>
       <Welcome />
     </div>
   );
