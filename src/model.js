@@ -202,7 +202,7 @@ const Predictions = () => {
     }, []);
 
     if (isPredicted && !!prediction) {
-        // make prediction a string
+        
         return (
             <div className="prediction">
                 <h1>{prediction.argMax(1).dataSync()[0]}</h1>

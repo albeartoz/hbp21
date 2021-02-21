@@ -3,11 +3,15 @@ import logo from './covidex-logo.png';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Col from 'react-bootstrap/Col';
 import Predictions from './model'
 import Navbar from './navbar'
+import {useState} from 'react'
+import APIDisp from './weather'
 
 function App() {
+  require('dotenv').config();
+  const [weather, setWeather] = useState()
+
   return (
     <div className="App">
       <Navbar></Navbar>
