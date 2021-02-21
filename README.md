@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# CoviDex
+## Inspiration
+It was the unanimous cheer of agreement when Albert suggested this idea that we decided to pursue it. A cheer that indicated our common interest as a team in HackBeanpot 2021 to address an unfortunate event in history. We also considered how our project would allow us to best emphasize our own skill sets. Lastly, being in a pandemic, caring about the safety of others, and wanting to develop something unique also contributed to the main purpose of our project.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What it does
+We developed an application that can give a covid "forecast" based on weather conditions in the user's area. It allows the user to get a sense of how COVID might spread around them for the next week. The UI also gives easy links to the CDC and WHO websites for official COVID information.
 
-## Available Scripts
+## How we built it
+We developed a web application with React and the Openweathermap API, combined with a Tensorflow.js model that can predict the COVID risk factor in a certain state given certain weather conditions as inputs. This model was initially built using Tensorflow in Python and converted to a js model, then hosted in AWS S3 to load into our React application. After the user inputs their location, the weather API returns the same weather features we trained on, and these are forward-passed into the model which then outputs a prediction we render to the screen. 
 
-In the project directory, you can run:
+## Challenges we ran into
+There were challenges in trying to work with the different APIs we had to use to obtain the data necessary as well as some of the Machine Learning technologies. Regarding ML, a lot of the effort was focused on making sure we preprocessed the dataset correctly and set up an efficient neural network. We didn’t really get to overcome this, but we realized that the features and labels used actually did not have any sort of correlation that could be visualized through regression. Thus, our model isn’t entirely functional.
 
-### `npm start`
+## Accomplishments that we're proud of
+We got a fully functional UI with all the components we prototyped initially up and running, and a functional tensorflow.js workflow in the "backend." We were able to load a dummy model from AWS and perform predictions on dummy data, then rendering this prediction on our React app. We were planning on translating this workflow to our actual model but we ran out of time. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## What we learned
+We picked up some knowledge about React and how that empowers front-end web developers to do cool things with Javascript that isn’t as user-friendly with other technologies. We also gained experience using APIs and drawing data from them as developers. Additionally, we learned how to incorporate a machine learning model into a frontend and use new data for accurate predictions (using a dummy model for now, hopefully the real model in the future). 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## What's next for CoviDex
+We want to incorporate our working model into the "backend," as right now the predictions are all arbitrary. Most importantly, we want to improve our model – we realize that ~36 hours wasn't enough to consider all the factors that go into making a new model, and there was probably some bias or confounding variables we didn't consider. More thorough research into how weather variables affect covid will give us more accurate predictions to show the user. 
