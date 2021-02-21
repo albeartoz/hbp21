@@ -3,9 +3,9 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button'
-import logo from './favicon.png';
+import logo from '../../favicon.png';
 
-const navbar = () => {
+const MyNavbar = () => {
     return (
         <Navbar className="Navbar" expand="lg">
             <Navbar.Brand href="#home"><img
@@ -33,4 +33,4 @@ const navbar = () => {
     )
 }
 
-export default navbar;
+export default MyNavbar;
