@@ -7,17 +7,24 @@ import fetch from 'cross-fetch';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Navbar from './navbar';
 
 
 
 function App() {
   return (
-    <div className="App-header">
+    <div className="App">
+      <Navbar />
+      <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+
         {/* <Form className="App-form">
           <Form.Control className="text-center" size="lg" type="text" placeholder="Type your location here" />
         </Form> */}
-        <FreeSolo/>
+
+        <FreeSolo />
+      </div>
+        
     </div>
   );
 }
