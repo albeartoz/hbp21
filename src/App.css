@@ -8,13 +8,12 @@
 
 .App-header {
   background-color: #bee9fb;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-form {
