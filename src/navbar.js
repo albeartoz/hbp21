@@ -7,7 +7,7 @@ import logo from './favicon.png';
 
 const navbar = () => {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar className="Navbar" expand="lg">
             <Navbar.Brand href="#home"><img
                 alt=""
                 src={logo}

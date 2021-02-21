@@ -6,6 +6,10 @@
   width: 50%;
 }
 
+.Navbar {
+  background-color: #e6e6e6;
+}
+
 .App-header {
   background-color: #bee9fb;
   padding: 40px 0 0 0;
@@ -14,6 +18,10 @@
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
+}
+
+.Submit-button {
+  margin-top: 10px;
 }
 
 .App-form {

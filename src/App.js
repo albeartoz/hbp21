@@ -23,6 +23,9 @@ function App() {
         </Form> */}
 
         <FreeSolo />
+        <Button className="Submit-button" variant="dark" size="lg">
+          See my risk
+        </Button>
       </div>
         
     </div>
