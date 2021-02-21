@@ -7,6 +7,7 @@ import {useState} from 'react'
 import APIDisp from './weather'
 import Welcome from './Pages/Welcome/welcome'
 import MyNavbar from './Components/Navbar/navbar';
+import Weekday from './Components/Weekday/weekday'
 
 function App() {
   require('dotenv').config();
@@ -14,14 +15,11 @@ function App() {
 
   return (
     <div className="App">
-      <MyNavbar />
-      <Welcome />
+{/*       <MyNavbar />
+      <Welcome /> */}
+      <Weekday date={2} risk={[12, 13, 0, 1, 2, 3, 4]} />
     </div>
   );
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 05c68f9663f688abf53cb98a8eeae7dd03d9c29b
 export default App;
