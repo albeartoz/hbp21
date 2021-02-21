@@ -34,7 +34,7 @@ function FreeSolo() {
         )}
       />
     </div>
-  );
+  )
 }
 
 const locations = [
