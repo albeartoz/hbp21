@@ -2,6 +2,7 @@ import * as tf from '@tensorflow/tfjs';
 import { useState, useEffect } from 'react'
 
 const modelurl = {
+    // should have updated model
     model: 'https://hbpbucket1.s3.us-east-2.amazonaws.com/model.json',
 };
 const testInput = tf.tensor([[[0., 0., 0., 0., 0.,
@@ -173,7 +174,7 @@ const testInput = tf.tensor([[[0., 0., 0., 0., 0.,
     0., 0., 0., 0., 0.,
     0., 0., 0.]]]);
 
-const Predictions = () => {
+const Predictions = (props) => {
     const [isPredicted, setIsPredicted] = useState(false);
     const [prediction, setPrediction] = useState();
     const [error, setError] = useState(null);
@@ -195,14 +196,8 @@ const Predictions = () => {
     }
 
     useEffect(() => {
-        tf.ready().then(async () => {
-            const mod = await loadModel(modelurl.model);
-            console.log(mod);
-            const thing = mod.predict(testInput);
-            setPrediction(mod.predict(testInput));
-            setIsPredicted(true);
-        })
-
+        // should be 7 day API instead
+        // need to get longitude and latitude here somehow
         fetch('https://api.openweathermap.org/data/2.5/weather?q=Boston&appid=' + process.env.REACT_APP_API_KEY)
         .then(res => res.json())
         .then(
@@ -215,9 +210,19 @@ const Predictions = () => {
                 setError(error);
             }
         )
+
+        tf.ready().then(async () => {
+            const mod = await loadModel(modelurl.model);
+            setPrediction(mod.predict(testInput));
+            setIsPredicted(true);
+        })
+        
     }, []);
     if (isLoaded) {
-        console.log(items);
+        // these need to be passed into mod.predict()
+        const features = []
+        //features.push(items.main.pressure, items.wind.speed, 15, items.main.temp_min, items.main.temp_max);
+        console.log(features);
     }
     if (isPredicted && !!prediction) {
         
