@@ -4,18 +4,23 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button'
+import { Link } from 'react-router-dom'
 import logo from '../../favicon.png';
 
 const MyNavbar = () => {
     return (
         <Navbar className="Navbar" expand="lg">
-            <Navbar.Brand href="#home"><img
-                alt=""
-                src={logo}
-                width="30"
-                height="30"
-                className="d-inline-block align-top"
-            />{' '}CoviDex</Navbar.Brand>
+            <Navbar.Brand>
+                <Link to="/" style={{ color: '#000' }}>
+                    <img
+                    alt=""
+                    src={logo}
+                    width="30"
+                    height="30"
+                    className="d-inline-block align-top"
+                    />
+                
+                {' '}CoviDex </Link> </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">

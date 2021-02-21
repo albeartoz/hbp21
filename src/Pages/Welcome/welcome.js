@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import logo from '../../covidex-logo.png';
+import { Link } from 'react-router-dom'
 
 const Welcome = () => {
     return(
@@ -18,9 +19,13 @@ const Welcome = () => {
                 
                 <FreeSolo />
                 
+                <Link to="/risk-report" style={{ color: '#000' }}>
                 <Button className="Submit-button" variant="dark" size="lg">
+                  
                     See my risk
+                  
                 </Button>
+                </Link>
             </div>
         </div>)
 }

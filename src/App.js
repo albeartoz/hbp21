@@ -1,11 +1,7 @@
 import './App.css';
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Predictions from './model'
 import {useState} from 'react'
-import APIDisp from './weather'
-import Welcome from './Pages/Welcome/welcome'
+import Main from './main';
 import MyNavbar from './Components/Navbar/navbar';
 
 function App() {
@@ -16,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <MyNavbar />
-      <Welcome />
+      <Main />
     </div>
   );
 }
