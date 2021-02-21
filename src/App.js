@@ -10,14 +10,15 @@ import MyNavbar from './Components/Navbar/navbar';
 import Weekday from './Components/Weekday/weekday'
 
 function App() {
+  document.body.style = 'background: #bee9fb;';
   require('dotenv').config();
   const [weather, setWeather] = useState()
 
   return (
     <div className="App">
-{/*       <MyNavbar />
-      <Welcome /> */}
-      <Weekday date={2} risk={[12, 13, 0, 1, 2, 3, 4]} />
+      <MyNavbar />
+      <Welcome />
+      {/* <Weekday date={2} risk={[12, 13, 0, 1, 2, 3, 4]} /> */}
     </div>
   );
 }
